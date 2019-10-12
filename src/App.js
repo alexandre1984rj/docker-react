@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-		  Testando 123456789 e os hexadecimais ABCDE
+		  Arquivo alterado para branch dev
         </p>
         <a
           className="App-link"
