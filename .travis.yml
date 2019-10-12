@@ -9,11 +9,15 @@ script:
   - docker run -e CI=true alexandre84rj/docker-react npm run test -- --coverage
 
 deploy:
-  provider: azure_web_apps
-  username: $AZURE_WA_USERNAME
-  password:
-    secret: "$AZURE_WA_PASSWORD"
-  site: docker-react-alexandre84rj
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-react"
+  env: "Docker-react-env"
+  bucket_name: "elasticbeanstalk-us-east-2-995967466921"
+  app: "docker-react"
+  bucket_path: "docker-react"
   on:
     branch: master
-  
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
