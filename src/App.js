@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-		  Arquivo alterado para branch dev
+		    O texto foi alterado na branch dev
         </p>
         <a
           className="App-link"
